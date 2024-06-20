@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cafsd3owwmwj6"]
+
+[ext_resource type="PackedScene" uid="uid://b46bc6rko4u2i" path="res://Vendedor/vendedor.tscn" id="1_xhbkr"]
+[ext_resource type="Script" path="res://Vendedor/vendedor2.gd" id="2_jvgj6"]
+[ext_resource type="Texture2D" uid="uid://nd7lqfx4sd2m" path="res://Textures/Idle2/1.png" id="3_vn0oy"]
+[ext_resource type="Texture2D" uid="uid://do2wb7mgi3d5x" path="res://Textures/Idle2/2.png" id="4_qj2pn"]
+[ext_resource type="Texture2D" uid="uid://bc3pee4xvu80s" path="res://Textures/Idle2/3.png" id="5_8qiwc"]
+[ext_resource type="Texture2D" uid="uid://dtcvlsyu6mpv" path="res://Textures/Idle2/4.png" id="6_0f2aa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xnrjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vn0oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qj2pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8qiwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0f2aa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Vendedor" instance=ExtResource("1_xhbkr")]
+script = ExtResource("2_jvgj6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+texture_filter = 1
+position = Vector2(4, 18)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_xnrjw")
+autoplay = "default"
+frame_progress = 0.258063

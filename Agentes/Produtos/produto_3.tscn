@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b82t803dvrn0b"]
+
+[ext_resource type="Script" path="res://Produtos/produto_3.gd" id="1_xcwoo"]
+[ext_resource type="PackedScene" uid="uid://haucku53pblx" path="res://Tilemap/tilemap.tscn" id="3_iifn6"]
+
+[node name="Produto3" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_xcwoo")
+
+[node name="Tilemap" parent="." instance=ExtResource("3_iifn6")]
+position = Vector2(1622, 748)
+
+[node name="TileMap" parent="Tilemap" index="0"]
+layer_1/tile_data = PackedInt32Array(-1507379, 524288, 3)
+
+[editable path="Tilemap"]

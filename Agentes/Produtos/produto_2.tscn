@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2m04u6awotop"]
+
+[ext_resource type="PackedScene" uid="uid://haucku53pblx" path="res://Tilemap/tilemap.tscn" id="2_rqxp1"]
+
+[sub_resource type="GDScript" id="GDScript_tgsjl"]
+script/source = "extends Node2D
+
+
+@export var valor := 20
+var nome = \"peixe\"
+"
+
+[node name="Produto2" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = SubResource("GDScript_tgsjl")
+
+[node name="Tilemap" parent="." instance=ExtResource("2_rqxp1")]
+position = Vector2(1622, 748)
+
+[node name="TileMap" parent="Tilemap" index="0"]
+layer_1/tile_data = PackedInt32Array(-1507379, 589824, 3)
+
+[editable path="Tilemap"]

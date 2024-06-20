@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsn2ufcaliylg"]
+
+[ext_resource type="PackedScene" uid="uid://fwnrlnvb5c15" path="res://Comprador/davidmartinez.tscn" id="1_3rup6"]
+[ext_resource type="Texture2D" uid="uid://d12c7ybdf1784" path="res://Textures/PNGS/dorio.png" id="2_xvqww"]
+
+[node name="Dorio" instance=ExtResource("1_3rup6")]
+texture = ExtResource("2_xvqww")

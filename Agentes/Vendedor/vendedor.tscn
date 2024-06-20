@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b46bc6rko4u2i"]
+
+[ext_resource type="Script" path="res://Vendedor/vendedor.gd" id="1_mtmie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx048"]
+size = Vector2(34, 60)
+
+[node name="Vendedor" type="Area2D"]
+script = ExtResource("1_mtmie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-34, 0)
+shape = SubResource("RectangleShape2D_jx048")

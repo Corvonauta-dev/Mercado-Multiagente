@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bavm2otuuijqf"]
+
+[ext_resource type="PackedScene" uid="uid://fwnrlnvb5c15" path="res://Comprador/davidmartinez.tscn" id="1_343mn"]
+[ext_resource type="Texture2D" uid="uid://bkwlk8migsl6c" path="res://Textures/PNGS/kiwi.png" id="2_7hn4j"]
+
+[node name="Kiwi" instance=ExtResource("1_343mn")]
+texture = ExtResource("2_7hn4j")

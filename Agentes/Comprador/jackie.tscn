@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://mwbchp2ibv76"]
+
+[ext_resource type="PackedScene" uid="uid://fwnrlnvb5c15" path="res://Comprador/davidmartinez.tscn" id="1_sqcb7"]
+[ext_resource type="Texture2D" uid="uid://cmtc5uq4r8bne" path="res://Textures/PNGS/jackie.png" id="2_438dq"]
+
+[node name="Jackie" instance=ExtResource("1_sqcb7")]
+texture = ExtResource("2_438dq")

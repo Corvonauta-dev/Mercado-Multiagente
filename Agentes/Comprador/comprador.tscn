@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://c76lwvnljvlim"]
+
+[ext_resource type="Script" path="res://Comprador/c.gd" id="1_eskke"]
+[ext_resource type="Texture2D" uid="uid://0e1csa2bj33f" path="res://Textures/comprador.png" id="1_kl2vi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irs8f"]
+size = Vector2(34, 60)
+
+[node name="C" type="Area2D"]
+z_index = 2
+y_sort_enabled = true
+script = ExtResource("1_eskke")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -29)
+texture = ExtResource("1_kl2vi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -29)
+shape = SubResource("RectangleShape2D_irs8f")
+
+[node name="Negociando" type="Timer" parent="."]
+
+[node name="Comprando" type="Timer" parent="."]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Negociando" to="." method="_on_negociando_timeout"]
+[connection signal="timeout" from="Comprando" to="." method="_on_comprando_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
